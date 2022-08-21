@@ -1,5 +1,7 @@
 # salcode Git Configuration
 
+## Git Aliases
+
 ## Installation
 
 - Clone this repo into a location (e.g. `~/salcode-git`)  
