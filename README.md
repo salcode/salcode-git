@@ -2,6 +2,12 @@
 
 ## Git Aliases
 
+### `git lg`
+
+Decorated version of `git log --oneline --graph`.
+
+See [Improve Git Log](https://salferrarello.com/improve-git-log/).
+
 ## Installation
 
 - Clone this repo into a location (e.g. `~/salcode-git`)  
