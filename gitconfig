@@ -1,4 +1,5 @@
 [alias]
+	d-b = branch -d @{-1}
 	lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'
 	open-pr-github = "!f() { \
 		: git branch ; \

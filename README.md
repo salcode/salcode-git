@@ -2,6 +2,12 @@
 
 ## Git Aliases
 
+### `git d-b`
+
+Alias for `git branch --delete @{-1}` to delete the previous branch.
+
+See [Git Previous Branch](https://salferrarello.com/git-previous-branch/).
+
 ### `git lg`
 
 Decorated version of `git log --oneline --graph`.
