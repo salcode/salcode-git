@@ -14,6 +14,14 @@ Alias for `git push --force-with-lease`.
 
 See [Never use git push force](https://salferrarello.com/never-git-push-force/).
 
+## Configuration
+
+### commit.verbose
+
+Set `commit.verbose = true` to display the changes in the comments of the commit.
+
+See [Git Preview Changes in Commit Message](https://salferrarello.com/git-preview-changes-in-commit-message/).
+
 ## Installation
 
 - Clone this repo into a location (e.g. `~/salcode-git`)  
