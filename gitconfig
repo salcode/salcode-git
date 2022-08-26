@@ -1,5 +1,20 @@
 [alias]
 	lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'
+	open-pr-github = "!f() { \
+		: git branch ; \
+		if [[ -z $1 ]]; \
+		then \
+			target=''; \
+		else \
+			target=\"$1...\"; \
+		fi; \
+		open \"$(git ls-remote --get-url $(git config --get branch.$(git branch --show-current).remote) \
+			| sed 's|git@github.com:\\(.*\\)$|https://github.com/\\1|' \
+			| sed 's|\\.git$||'; \
+		)/compare/$target$(\
+		git config --get branch.$(git branch --show-current).merge | cut -d '/' -f 3- \
+		)?expand=1\"; \
+	}; f"
 	please = push --force-with-lease
 [commit]
 	verbose = true

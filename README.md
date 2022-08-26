@@ -8,6 +8,14 @@ Decorated version of `git log --oneline --graph`.
 
 See [Improve Git Log](https://salferrarello.com/improve-git-log/).
 
+### `git open-pr-github [targetBranch]`
+
+Alias to open a GitHub URL for the current repo to create a pull request from the current branch into the `[targetBranch]`. If the `[targetBranch]` is not provided, the PR will target the default branch on the repo.
+
+Note: This requires the upstream reference is defined for the current branch, so using `git push --set-upstream` (or `git push -u`) when pushing the branch is necessary.
+
+See [Git Alias Open Pull Request on GitHub](https://salferrarello.com/git-alias-open-pull-request-github/).
+
 ### `git please`
 
 Alias for `git push --force-with-lease`.
