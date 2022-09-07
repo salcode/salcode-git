@@ -36,6 +36,12 @@ Set `commit.verbose = true` to display the changes in the comments of the commit
 
 See [Git Preview Changes in Commit Message](https://salferrarello.com/git-preview-changes-in-commit-message/).
 
+### rebase.autosquash
+
+Set `rebase.autosquash = true` to move fixup commits to the appropriate position (and mark them fixup) when doing an interactive rebase.
+
+See [Autosquashing Git Commits](https://thoughtbot.com/blog/autosquashing-git-commits)
+
 ## Installation
 
 - Clone this repo into a location (e.g. `~/salcode-git`)  

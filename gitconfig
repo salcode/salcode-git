@@ -19,3 +19,5 @@
 	please = push --force-with-lease
 [commit]
 	verbose = true
+[rebase]
+	autosquash = true
