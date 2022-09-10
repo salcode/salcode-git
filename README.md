@@ -28,6 +28,12 @@ Alias for `git push --force-with-lease`.
 
 See [Never use git push force](https://salferrarello.com/never-git-push-force/).
 
+### `git track-origin-same-branch-name`
+
+Alias for `git branch --set-upstream-to=origin/$(git branch --show-current)`.
+
+See [There is no tracking information for the current branch](https://salferrarello.com/there-is-no-tracking-information-for-the-current-branch/).
+
 ## Configuration
 
 ### commit.verbose

@@ -17,6 +17,7 @@
 		)?expand=1\"; \
 	}; f"
 	please = push --force-with-lease
+	track-origin-same-branch-name = !git branch --set-upstream-to=origin/$(git branch --show-current)
 [commit]
 	verbose = true
 [rebase]
