@@ -8,6 +8,12 @@ Alias for `git branch --delete @{-1}` to delete the previous branch.
 
 See [Git Previous Branch](https://salferrarello.com/git-previous-branch/).
 
+### `git drb`
+
+Alias for `git push origin --delete $(git branch --show-current)` to delete the remote branch with the same name as the current branch from the remote **origin**.
+
+See [Deleting Remote Branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches#_delete_branches).
+
 ### `git lg`
 
 Decorated version of `git log --oneline --graph`.
