@@ -40,6 +40,12 @@ Alias for `git push --force-with-lease`.
 
 See [Never use git push force](https://salferrarello.com/never-git-push-force/).
 
+### `git recover-rejected-commit`
+
+Alias to create a commit and pre-fill the commit message with the most recent commit message entered. This is useful to recover a commit message when commit validation fails.
+
+See [Recover failed Git commit message](https://salferrarello.com/recover-failed-git-commit-message/)
+
 ### `git track-origin-same-branch-name`
 
 Alias for `git branch --set-upstream-to=origin/$(git branch --show-current)`.
