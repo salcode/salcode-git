@@ -2,6 +2,12 @@
 
 ## Git Aliases
 
+### `git can-ff-merge [branch]`
+
+Alias to check if merging `[branch]` into the current branch can be done as a fast-forward merge. (i.e. checks if current branch is an ancestor of `[branch]`)
+
+See [Check If We Can Do a Git Fast-Forward Merge](https://salferrarello.com/check-can-do-git-fast-forward-merge/).
+
 ### `git d-b`
 
 Alias for `git branch --delete @{-1}` to delete the previous branch.
