@@ -1,1 +1,1 @@
-salcode Git Configuration
+# salcode Git Configuration
