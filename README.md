@@ -48,7 +48,7 @@ See [Recover failed Git commit message](https://salferrarello.com/recover-failed
 
 ### `git track-origin-same-branch-name`
 
-Alias for `git branch --set-upstream-to=origin/$(git branch --show-current)`.
+Alias for `git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)`.
 
 See [There is no tracking information for the current branch](https://salferrarello.com/there-is-no-tracking-information-for-the-current-branch/).
 
