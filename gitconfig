@@ -2,12 +2,12 @@
 	can-ff-merge = "!f() { \
 		[ -e "${1}" ] && echo "Missing branch name to merge" && exit 1; \
 		git "merge-base --is-ancestor \
-		$(git branch --show-current) ${1}" \
+		$(git rev-parse --abbrev-ref HEAD) ${1}" \
 		&& echo 'Yes, this can ff-merge' && exit 0 \
 		|| echo 'No, this can NOT ff-merge' && exit 1; \
 	}; f"
 	d-b = branch -d @{-1}
-	drb = !git push origin --delete $(git branch --show-current)
+	drb = !git push origin --delete $(git rev-parse --abbrev-ref HEAD)
 	lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'
 	open-pr-github = "!f() { \
 		: git branch ; \
@@ -17,16 +17,16 @@
 		else \
 			target=\"$1...\"; \
 		fi; \
-		open \"$(git ls-remote --get-url $(git config --get branch.$(git branch --show-current).remote) \
+		open \"$(git ls-remote --get-url $(git config --get branch.$(git rev-parse --abbrev-ref HEAD).remote) \
 			| sed 's|git@github.com:\\(.*\\)$|https://github.com/\\1|' \
 			| sed 's|\\.git$||'; \
 		)/compare/$target$(\
-		git config --get branch.$(git branch --show-current).merge | cut -d '/' -f 3- \
+		git config --get branch.$(git rev-parse --abbrev-ref HEAD).merge | cut -d '/' -f 3- \
 		)?expand=1\"; \
 	}; f"
 	please = push --force-with-lease
 	recover-rejected-commit = "!f() { git "commit -e --file=$(git rev-parse --git-dir)/COMMIT_EDITMSG"; }; f"
-	track-origin-same-branch-name = !git branch --set-upstream-to=origin/$(git branch --show-current)
+	track-origin-same-branch-name = !git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)
 [commit]
 	verbose = true
 [rebase]
