@@ -17,11 +17,11 @@
 		else \
 			target=\"$1...\"; \
 		fi; \
-		open \"$(git ls-remote --get-url $(git config --get branch.$(git branch --show-current).remote) \
+		open \"$(git ls-remote --get-url $(git config --get branch.$(git rev-parse --abbrev-ref HEAD).remote) \
 			| sed 's|git@github.com:\\(.*\\)$|https://github.com/\\1|' \
 			| sed 's|\\.git$||'; \
 		)/compare/$target$(\
-		git config --get branch.$(git branch --show-current).merge | cut -d '/' -f 3- \
+		git config --get branch.$(git rev-parse --abbrev-ref HEAD).merge | cut -d '/' -f 3- \
 		)?expand=1\"; \
 	}; f"
 	please = push --force-with-lease
