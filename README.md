@@ -60,6 +60,14 @@ Set `commit.verbose = true` to display the changes in the comments of the commit
 
 See [Git Preview Changes in Commit Message](https://salferrarello.com/git-preview-changes-in-commit-message/).
 
+### push.default
+
+Set `push.default = current` to define the behavior of `git push`
+
+> push the current branch to update a branch with the same name on the receiving end
+
+See Git config [push.default](https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault) and [Git push default – difference between simple, matching, current, etc.](https://rakhesh.com/coding/git-push-default/)
+
 ### rebase.autosquash
 
 Set `rebase.autosquash = true` to move fixup commits to the appropriate position (and mark them fixup) when doing an interactive rebase.

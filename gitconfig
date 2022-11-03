@@ -29,5 +29,7 @@
 	track-origin-same-branch-name = !git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)
 [commit]
 	verbose = true
+[push]
+	default = current
 [rebase]
 	autosquash = true
