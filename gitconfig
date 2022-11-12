@@ -30,6 +30,7 @@
 [commit]
 	verbose = true
 [push]
+	autoSetupRemote = true
 	default = current
 [rebase]
 	autosquash = true

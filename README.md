@@ -60,6 +60,14 @@ Set `commit.verbose = true` to display the changes in the comments of the commit
 
 See [Git Preview Changes in Commit Message](https://salferrarello.com/git-preview-changes-in-commit-message/).
 
+### push.autoSetupRemote
+
+Set `push.autoSetupRemote = true` to configure Git to treat `git push` as if it were `git push --set-upstream`. This helps with the "There is no tracking information for the current branch." message that can occur on `git pull` because now the tracking information is automatically set when you do a `git push`.
+
+See [Git autoSetupRemote Prevents "no tracking information" Error](https://salferrarello.com/git-autosetupremote-prevent-no-tracking-information).
+
+**Note**: This only works on Git version `2.38` (released 2022-10-03) or greater.
+
 ### push.default
 
 Set `push.default = current` to define the behavior of `git push`
