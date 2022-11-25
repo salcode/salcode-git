@@ -27,6 +27,12 @@
 	please = push --force-with-lease
 	recover-rejected-commit = "!f() { git "commit -e --file=$(git rev-parse --git-dir)/COMMIT_EDITMSG"; }; f"
 	track-origin-same-branch-name = !git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
+	# Mark lines that have a commit skipped using --ignore-rev with a `?`
+	markIgnoredLines = true
+	# Mark lines that were added in a skipped commit with a `*`
+	markUnblamableLines = true
 [commit]
 	verbose = true
 [push]
