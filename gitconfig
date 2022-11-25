@@ -51,6 +51,12 @@
 	sort = -committerdate
 [checkout]
 	defaultRemote = origin
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
+	# Mark lines that have a commit skipped using --ignore-rev with a `?`
+	markIgnoredLines = true
+	# Mark lines that were added in a skipped commit with a `*`
+	markUnblamableLines = true
 [commit]
 	verbose = true
 [push]

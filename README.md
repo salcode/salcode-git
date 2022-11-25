@@ -74,6 +74,18 @@ Set `checkout.defaultRemote = origin` to avoid the error "matched multiple remot
 
 See [Git matched multiple remote tracking branches](https://salferrarello.com/git-matched-multiple-remote-tracking-branches/).
 
+### blame.ignoreRevsFile
+
+Set `blame.ignoreRevsFile = .git-blame-ignore-revs` to ignore any commits listed in the optional repo file `.git-blame-ignore-revs` when doing a `git blame`.
+
+Additionally set `blame.markIgnoredLines = true` to "Mark lines that have a commit skipped using --ignore-rev with a `?`."
+
+And set `blame.markUnblamableLines = true` to "Mark lines that were added in a skipped commit with a `*`."
+
+See [A better git blame with --ignore-rev](https://michaelheap.com/git-ignore-rev/)
+
+**Note**: This only works on Git version `2.23` (released 2019-08-16) or greater.
+
 ### commit.verbose
 
 Set `commit.verbose = true` to display the changes in the comments of the commit.
