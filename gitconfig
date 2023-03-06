@@ -2,8 +2,13 @@
 	can-ff-merge = "!f() { \
 		: git branch ; \
 		[ -e "${1}" ] && echo "Missing branch name to merge" && exit 1; \
+		branch=$1; \
+		if [[ "$branch" == '-' ]]; \
+		then \
+			branch='@{-1}'; \
+		fi; \
 		git "merge-base --is-ancestor \
-		$(git rev-parse --abbrev-ref HEAD) ${1}" \
+		$(git rev-parse --abbrev-ref HEAD) ${branch}" \
 		&& echo 'Yes, this can ff-merge' && exit 0 \
 		|| echo 'No, this can NOT ff-merge' && exit 1; \
 	}; f"

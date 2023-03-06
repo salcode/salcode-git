@@ -4,7 +4,7 @@
 
 ### `git can-ff-merge [branch]`
 
-Alias to check if merging `[branch]` into the current branch can be done as a fast-forward merge. (i.e. checks if current branch is an ancestor of `[branch]`)
+Alias to check if merging `[branch]` into the current branch can be done as a fast-forward merge. (i.e. checks if current branch is an ancestor of `[branch]`). Note: This command supports using a single dash (`-`) to represent [the previous branch](https://salferrarello.com/git-previous-branch/).
 
 See [Check If We Can Do a Git Fast-Forward Merge](https://salferrarello.com/check-can-do-git-fast-forward-merge/).
 
