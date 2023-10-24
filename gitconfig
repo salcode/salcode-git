@@ -33,6 +33,8 @@
 	please = push --force-with-lease
 	recover-rejected-commit = "!f() { git "commit -e --file=$(git rev-parse --git-dir)/COMMIT_EDITMSG"; }; f"
 	track-origin-same-branch-name = !git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)
+[checkout]
+	defaultRemote = origin
 [commit]
 	verbose = true
 [push]

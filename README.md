@@ -54,6 +54,12 @@ See [There is no tracking information for the current branch](https://salferrare
 
 ## Configuration
 
+### checkout.defaultRemote
+
+Set `checkout.defaultRemote = origin` to avoid the error "matched multiple remote tracking branches" when running `git checkout`. With this setting, Git uses the remote `origin` when doing a `git checkout` (unless a different remote is explicitly defined).
+
+See [Git matched multiple remote tracking branches](https://salferrarello.com/git-matched-multiple-remote-tracking-branches/).
+
 ### commit.verbose
 
 Set `commit.verbose = true` to display the changes in the comments of the commit.
