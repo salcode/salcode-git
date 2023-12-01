@@ -100,8 +100,10 @@ See [Sort Git Tags by Version](https://salferrarello.com/sort-git-tags-by-versio
 ```
 git clone https://github.com/salcode/salcode-git.git ~/salcode-git
 ```
-- Modify your default Git config file (`~/.gitconfig`) to include the config from this project. e.g. add  
+- Modify your default Git config file, `~/.config/git/config` (or `~/.gitconfig`<sup>*</sup>), to include the config from this project. e.g. add
 ```
 [include]
   path = ~/salcode-git/gitconfig
 ```
+
+<sup>\*</sup> The preferred Git configuration location is `~/.config/git/config`, `~/.gitconfig` is a legacy location. When both `~/.config/git/config` _and_ `~/.gitconfig` are present, both will be loaded but `~/.gitconfig` will take precedence.
