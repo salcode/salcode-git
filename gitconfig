@@ -42,3 +42,5 @@
 	default = current
 [rebase]
 	autosquash = true
+[tag]
+	sort = -version:refname

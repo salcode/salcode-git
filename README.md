@@ -88,6 +88,12 @@ Set `rebase.autosquash = true` to move fixup commits to the appropriate position
 
 See [Autosquashing Git Commits](https://thoughtbot.com/blog/autosquashing-git-commits)
 
+### tag.sort
+
+Set `tag.sort = -version:refname` to display tags sorted by version number with the highest version first.
+
+See [Sort Git Tags by Version](https://salferrarello.com/sort-git-tags-by-version/).
+
 ## Installation
 
 - Clone this repo into a location (e.g. `~/salcode-git`)  
