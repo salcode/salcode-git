@@ -54,6 +54,10 @@ See [There is no tracking information for the current branch](https://salferrare
 
 ## Configuration
 
+### branch.sort
+
+Set `branch.sort = -committerdate` to display the branches in descending order by commiter date (i.e. the most recent at the top).
+
 ### checkout.defaultRemote
 
 Set `checkout.defaultRemote = origin` to avoid the error "matched multiple remote tracking branches" when running `git checkout`. With this setting, Git uses the remote `origin` when doing a `git checkout` (unless a different remote is explicitly defined).
