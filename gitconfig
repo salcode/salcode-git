@@ -13,6 +13,7 @@
 		|| echo 'No, this can NOT ff-merge' && exit 1; \
 	}; f"
 	d-b = branch -d @{-1}
+	dgone = !git fetch --prune && git for-each-ref --format '%(refname:short) %(upstream:track)' |  awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D
 	drb = !git push origin --delete $(git rev-parse --abbrev-ref HEAD)
 	lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'
 	open-pr-github = "!f() { \

@@ -14,6 +14,10 @@ Alias for `git branch --delete @{-1}` to delete the previous branch.
 
 See [Git Previous Branch](https://salferrarello.com/git-previous-branch/).
 
+### `git dgone`
+
+Alias to delete local branches that are gone on the remote. This combines `git fetch --prune` with processing the branches looking for those marked `[gone]`.
+
 ### `git drb`
 
 Alias for `git push origin --delete $(git rev-parse --abbrev-ref HEAD)` to delete the remote branch with the same name as the current branch from the remote **origin**.
