@@ -15,6 +15,19 @@
 	d-b = branch -d @{-1}
 	dgone = !git fetch --prune && git for-each-ref --format '%(refname:short) %(upstream:track)' |  awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D
 	drb = !git push origin --delete $(git rev-parse --abbrev-ref HEAD)
+	is-up-to-date-with = "!f() { \
+		: git branch ; \
+		[ -e "${1}" ] && echo "Missing branch name to compare" && exit 1; \
+		branch=$1; \
+		if [[ "$branch" == '-' ]]; \
+		then \
+			branch='@{-1}'; \
+		fi; \
+		git "merge-base --is-ancestor \
+		${branch} $(git rev-parse --abbrev-ref HEAD)" \
+		&& echo "Yes, this branch is up to date with $branch" && exit 0 \
+		|| echo "No, this branch is NOT up to date with $branch" && exit 1; \
+	}; f"
 	lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'
 	open-pr-github = "!f() { \
 		: git branch ; \

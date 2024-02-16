@@ -24,6 +24,12 @@ Alias for `git push origin --delete $(git rev-parse --abbrev-ref HEAD)` to delet
 
 See [Deleting Remote Branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches#_delete_branches).
 
+### `git is-up-to-date-with [branch]`
+
+Alias to check if the current branch is up to date with `[branch]` (i.e. could we fast-forward merge our current branch into `[branch]`). Note: This command supports using a single dash (`-`) to represent [the previous branch](https://salferrarello.com/git-previous-branch/).
+
+See [Is Git Branch Up to Date](https://salferrarello.com/is-git-branch-up-to-date/).
+
 ### `git lg`
 
 Decorated version of `git log --oneline --graph`.
