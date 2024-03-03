@@ -28,6 +28,7 @@
 		&& echo "Yes, this branch is up to date with $branch" && exit 0 \
 		|| echo "No, this branch is NOT up to date with $branch" && exit 1; \
 	}; f"
+	blame-ignore-revs = blame --ignore-revs-file .git-blame-ignore-revs
 	lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'
 	open-pr-github = "!f() { \
 		: git branch ; \

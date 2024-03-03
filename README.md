@@ -2,6 +2,14 @@
 
 ## Git Aliases
 
+### `git blame-ignore-revs [filename]`
+
+Alias for `git blame --ignore-revs-file .git-blame-ignore-revs`, this runs `git blame` but ignores any commits listed in the file `.git-blame-ignore-revs`.
+
+Note: If you run this command and the file `.git-blame-ignore-revs` does not exist, you'll throw an error.
+
+See [The Worst Global Git Config Option](https://salferrarello.com/the-worst-global-git-config-option/).
+
 ### `git can-ff-merge [branch]`
 
 Alias to check if merging `[branch]` into the current branch can be done as a fast-forward merge. (i.e. checks if current branch is an ancestor of `[branch]`). Note: This command supports using a single dash (`-`) to represent [the previous branch](https://salferrarello.com/git-previous-branch/).
