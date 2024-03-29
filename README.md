@@ -58,7 +58,7 @@ See [Recover failed Git commit message](https://salferrarello.com/recover-failed
 
 ### `git rhu` (and `git frhu`)
 
-Alias for `git reset --hard @{ustream}` to discard local changes and reset the branch to match the upstream (`@{upstream}`) branch.
+Alias for `git reset --hard @{upstream}` to discard local changes and reset the branch to match the upstream (`@{upstream}`) branch.
 
 `git frhu` does the same thing but performs a `git fetch` first to ensure we have the latest version of the upstream branch.
 
