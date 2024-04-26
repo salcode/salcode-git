@@ -56,6 +56,14 @@ Alias to create a commit and pre-fill the commit message with the most recent co
 
 See [Recover failed Git commit message](https://salferrarello.com/recover-failed-git-commit-message/)
 
+### `git rhu` (and `git frhu`)
+
+Alias for `git reset --hard @{upstream}` to discard local changes and reset the branch to match the upstream (`@{upstream}`) branch.
+
+`git frhu` does the same thing but performs a `git fetch` first to ensure we have the latest version of the upstream branch.
+
+See [Replace Local Git Branch with Branch on GitHub](https://salferrarello.com/replace-local-git-branch-with-branch-on-github)
+
 ### `git track-origin-same-branch-name`
 
 Alias for `git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)`.
