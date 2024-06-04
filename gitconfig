@@ -21,7 +21,7 @@
 		branch=$1; \
 		if [[ "$branch" == '-' ]]; \
 		then \
-			branch='@{-1}'; \
+			branch=$(git rev-parse --abbrev-ref @{-1}); \
 		fi; \
 		git "merge-base --is-ancestor \
 		${branch} $(git rev-parse --abbrev-ref HEAD)" \
