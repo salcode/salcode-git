@@ -64,6 +64,10 @@ Alias for `git reset --hard @{upstream}` to discard local changes and reset the 
 
 See [Replace Local Git Branch with Branch on GitHub](https://salferrarello.com/replace-local-git-branch-with-branch-on-github)
 
+### `git shnpfb`
+
+Alias for `git show --no-patch --format='%B'`, which gets the commit message from a commit.
+
 ### `git track-origin-same-branch-name`
 
 Alias for `git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)`.

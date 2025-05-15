@@ -48,6 +48,7 @@
 	recover-rejected-commit = "!f() { git "commit -e --file=$(git rev-parse --git-dir)/COMMIT_EDITMSG"; }; f"
 	rhu = reset --hard @{upstream}
 	frhu = !git fetch && git reset --hard @{upstream}
+	shnpfb = show --no-patch --format='%B'
 	track-origin-same-branch-name = !git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)
 [branch]
 	sort = -committerdate
