@@ -49,6 +49,7 @@
 	rhu = reset --hard @{upstream}
 	frhu = !git fetch && git reset --hard @{upstream}
 	shnpfb = show --no-patch --format='%B'
+	squashbackto = !git -c sequence.editor=\"vim --clean -c 'silent 2,\\$s/^pick/squash/|:wq' \" rebase --interactive --keep-base
 	track-origin-same-branch-name = !git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)
 [branch]
 	sort = -committerdate

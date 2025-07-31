@@ -68,6 +68,12 @@ See [Replace Local Git Branch with Branch on GitHub](https://salferrarello.com/r
 
 Alias for `git show --no-patch --format='%B'`, which gets the commit message from a commit.
 
+### `git squashbackto [branch]`
+
+Alias to squash all commits on the current branch back to the specified branch (or commit).
+
+See [Git Squash Back To](https://salferrarello.com/git-squash-back-to/)
+
 ### `git track-origin-same-branch-name`
 
 Alias for `git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)`.
