@@ -29,7 +29,23 @@
 		|| echo "No, this branch is NOT up to date with $branch" && exit 1; \
 	}; f"
 	lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'
-	open-pr-github = "!f() { \
+	cb-open-pr = "!f() { \
+		: git branch ; \
+		if [[ -z $1 ]]; \
+		then \
+			target=''; \
+		else \
+			target=\"$1...\"; \
+		fi; \
+		open \"$(git ls-remote --get-url $(git config --get branch.$(git rev-parse --abbrev-ref HEAD).remote) \
+			| sed 's|git@codeberg.org:\\(.*\\)$|https://codeberg.org/\\1|' \
+			| sed 's|\\.git$||'; \
+		)/compare/$target$(\
+		git config --get branch.$(git rev-parse --abbrev-ref HEAD).merge | cut -d '/' -f 3- \
+		)\"; \
+	}; f"
+	open-pr-github = gh-open-pr
+	gh-open-pr = "!f() { \
 		: git branch ; \
 		if [[ -z $1 ]]; \
 		then \
