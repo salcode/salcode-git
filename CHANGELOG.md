@@ -2,6 +2,11 @@
 
 ## Unreleased
 - **Breaking Change**: Rename `open-pr-github` to `gh-open-pr` ([#43](https://github.com/salcode/salcode-git/pull/43)
+- Add `git time-adjust` alias ([#46](https://github.com/salcode/salcode-git/issues/46))
+  - `git time-adjust` displays commit date and author date for current (`HEAD`) commit
+  - `git time-adjust now` sets both commit date and author date to current date/time
+  - `git time-adjust now -v-2H` sets both commit date and author date to current date/time minus 2 hours (see `date` `-v` flag for more informatino)
+  - `git time-adjust <date>` sets both commit date and author date to specified date
 
 ## [1.0.0] - 2025-12-08
 

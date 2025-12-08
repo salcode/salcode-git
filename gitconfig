@@ -50,6 +50,31 @@
 	frhu = !git fetch && git reset --hard @{upstream}
 	shnpfb = show --no-patch --format='%B'
 	squashbackto = !git -c sequence.editor=\"vim --clean -c 'silent 2,\\$s/^pick/squash/|:wq' \" rebase --interactive --keep-base
+	time-adjust = "!f() { \
+		case ${1:-} in \
+			now) \
+				GIT_COMMITTER_DATE=$(date -Iseconds ${@:2}) git commit --amend --no-edit --date $(date -Iseconds ${@:2}) \
+				;; \
+			'') \
+				git --no-pager show --no-patch --pretty=fuller && \
+				echo; \
+				echo 'USAGE:'; \
+				echo; \
+				echo '- Set current commit time to now'; \
+				echo 'git time-adjust now'; \
+				echo; \
+				echo '- Set current commit time to now with offset (e.g. set to 2 hours before now). See date command.'; \
+				echo 'git time-adjust now -v-2H'; \
+				echo; \
+				echo '- Set current commit time to now with year modified'; \
+				echo 'git time-adjust now -v-2H'; \
+				;; \
+			*) \
+				echo "$@ command given"; \
+				GIT_COMMITTER_DATE=\"${1:-}\" git commit --amend --no-edit --date \"${1:-}\" \
+				;; \
+			esac \
+	}; f"
 	track-origin-same-branch-name = !git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)
 [branch]
 	sort = -committerdate
