@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## Unreleased
+- **Breaking Change**: Rename `open-pr-github` to `gh-open-pr` ([#43](https://github.com/salcode/salcode-git/pull/43)
 
 ## [1.0.0] - 2025-12-08
 
