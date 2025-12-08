@@ -29,7 +29,7 @@
 		|| echo "No, this branch is NOT up to date with $branch" && exit 1; \
 	}; f"
 	lg = log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'
-	open-pr-github = "!f() { \
+	gh-open-pr = "!f() { \
 		: git branch ; \
 		if [[ -z $1 ]]; \
 		then \
